@@ -85,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
 	static boolean ASWP_OFFLINE		= SmartWebView.ASWP_OFFLINE;
 	static boolean ASWP_EXTURL		= SmartWebView.ASWP_EXTURL;
 
+
+
 	//Security variables
 	static boolean ASWP_CERT_VERIFICATION = SmartWebView.ASWP_CERT_VERIFICATION;
 
@@ -97,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Careful with these variable names if altering
     WebView asw_view;
-    ProgressBar asw_progress;
+    ProgressBar  asw_progress;
     TextView asw_loading_text;
     NotificationManager asw_notification;
     Notification asw_notification_new;
@@ -200,11 +202,14 @@ public class MainActivity extends AppCompatActivity {
 			pullfresh.setEnabled(false);
 		}
 
-		if (ASWP_PBAR) {
-            asw_progress = findViewById(R.id.msw_progress);
-        } else {
-            findViewById(R.id.msw_progress).setVisibility(View.GONE);
-        }
+		asw_progress = findViewById(R.id.msw_progress);
+		asw_progress.setMax(100);
+
+//		if (ASWP_PBAR) {
+//            asw_progress = findViewById(R.id.msw_progress);
+//        } else {
+//            findViewById(R.id.msw_progress).setVisibility(View.GONE);
+//        }
         asw_loading_text = findViewById(R.id.msw_loading_text);
         Handler handler = new Handler();
 
@@ -355,12 +360,18 @@ public class MainActivity extends AppCompatActivity {
             }
 
             //Getting webview rendering progress
+
+
+
             @Override
             public void onProgressChanged(WebView view, int p) {
                 if (ASWP_PBAR) {
                     asw_progress.setProgress(p);
                     if (p == 100) {
-                        asw_progress.setProgress(0);
+//                        asw_progress.setProgress(0);
+						asw_progress.setVisibility(View.GONE);
+
+
                     }
                 }
             }
