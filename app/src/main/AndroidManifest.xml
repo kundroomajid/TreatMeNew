@@ -36,37 +36,43 @@
     <uses-feature android:name="android.hardware.location.gps" />
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/SplashTheme"
+	<application
+		android:allowBackup="true"
+		android:icon="@mipmap/ic_launcher"
+		android:label="@string/app_name"
+		android:supportsRtl="true"
+		android:theme="@style/SplashTheme"
 		android:hardwareAccelerated="true"
-        tools:ignore="AllowBackup">
-        <activity
-            android:name=".SplashScreen"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait" > <!-- remove or alter as your apps requirement -->
-            <intent-filter android:label="@string/app_name">
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="https"
-                    android:host="github.com"
-                    android:pathPrefix="/voinsource" /> <!-- if you want only a specific directory from your website to be opened in the app through external links -->
-            </intent-filter>
-        </activity>
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-    </application>
+		tools:ignore="AllowBackup">
+		<activity
+			android:name=".MainActivity"
+			android:label="@string/app_name"
+			android:screenOrientation="portrait" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.LAUNCHER" />
+
+			</intent-filter>
+		</activity>
+
+		<!--<activity-->
+			<!--android:name=".MainActivity"-->
+			<!--android:screenOrientation="portrait" > &lt;!&ndash; remove or alter as your apps requirement &ndash;&gt;-->
+			<!--<intent-filter -->
+				<!--android:label="@string/app_name">-->
+				<!--<action android:name="android.intent.action.MAIN" />-->
+				<!--<category android:name="android.intent.category.LAUNCHER" />-->
+				<!--<action android:name="android.intent.action.VIEW" />-->
+				<!--&lt;!&ndash;<category android:name="android.intent.category.DEFAULT" />&ndash;&gt;-->
+				<!--<category android:name="android.intent.category.BROWSABLE" />-->
+				<!--<data android:scheme="https"-->
+					<!--android:host="github.com"-->
+					<!--android:pathPrefix="/voinsource" /> &lt;!&ndash; if you want only a specific directory from your website to be opened in the app through external links &ndash;&gt;-->
+			<!--</intent-filter>-->
+		<!--</activity>-->
+		<meta-data
+			android:name="com.google.android.gms.version"
+			android:value="@integer/google_play_services_version" />
+	</application>
 </manifest>

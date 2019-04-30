@@ -62,7 +62,7 @@ class SmartWebView {
 	/* -- CONFIG VARIABLES -- */
 
 	//complete URL of your website or offline webpage
-	static String ASWV_URL          = "https://shifaddnn.000webhostapp.com/shifa";
+	static String ASWV_URL          = "https://treatme.co.in";
 
 	//to upload any file type using "*/*"; check file type references for more
 	static String ASWV_F_TYPE       = "*/*";

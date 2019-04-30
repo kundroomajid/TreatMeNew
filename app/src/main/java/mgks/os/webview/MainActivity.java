@@ -241,6 +241,9 @@ public class MainActivity extends AppCompatActivity {
 		webSettings.setAllowUniversalAccessFromFileURLs(true);
 		webSettings.setUseWideViewPort(true);
 		webSettings.setDomStorageEnabled(true);
+		webSettings.setRenderPriority(WebSettings.RenderPriority.HIGH);
+		webSettings.setAppCacheEnabled(true);
+		asw_view.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
 
 		asw_view.setOnLongClickListener(new View.OnLongClickListener() {
 			@Override
@@ -431,6 +434,7 @@ public class MainActivity extends AppCompatActivity {
         public void onPageFinished(WebView view, String url) {
             findViewById(R.id.msw_welcome).setVisibility(View.GONE);
             findViewById(R.id.msw_view).setVisibility(View.VISIBLE);
+            asw_progress.setVisibility(View.GONE);
         }
         //For android below API 23
 		@SuppressWarnings("deprecation")

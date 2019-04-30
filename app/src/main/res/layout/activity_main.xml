@@ -28,10 +28,11 @@
 
 			<ImageView
 				android:id="@+id/msw_logo"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
 				android:layout_centerInParent="true"
 				android:layout_gravity="top"
+				android:src="@raw/front_splash"
 				android:contentDescription="@string/image_view"
 				android:gravity="center_vertical|center_horizontal|center" />
 
