@@ -28,13 +28,15 @@
 
 			<ImageView
 				android:id="@+id/msw_logo"
-				android:layout_width="match_parent"
-				android:layout_height="match_parent"
+				android:layout_width="300dp"
+				android:layout_height="wrap_content"
 				android:layout_centerInParent="true"
+				android:layout_alignParentStart="true"
+				android:layout_alignParentBottom="true"
 				android:layout_gravity="top"
-				android:src="@raw/front_splash"
 				android:contentDescription="@string/image_view"
-				android:gravity="center_vertical|center_horizontal|center" />
+				android:gravity="center_vertical|center_horizontal|center"
+				android:src="@raw/front_splash" />
 
 			<TextView
 				android:id="@+id/msw_loading_text"
